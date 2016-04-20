@@ -1,5 +1,7 @@
 #!/bin/bash
-
+#
+# This script helps run docker commands faster.
+#
 printf "================================================================================\n"
 printf "= Docker Actions Script                                                        =\n"
 printf "================================================================================\n"
