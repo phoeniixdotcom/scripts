@@ -1,0 +1,2 @@
+#!/bin/sh -x
+x11vnc -R stop

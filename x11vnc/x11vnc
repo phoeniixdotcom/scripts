@@ -1,0 +1,33 @@
+#!/bin/sh -x
+# Connect to existing x session, must be logged in, see below for creating new x session
+x11vnc -display :0 -oa /var/tmp/x11vnc.log -rfbauth ~/.vnc/passwd \
+	-noncache \
+	-noxdamage \
+	-noxrecord \
+	-noxfixes \
+	-forever -bg
+
+# Create x11 session
+#x11vnc -create \
+#       -oa /var/tmp/x11vnc.log \
+#       -usepw \
+#       -rfbauth ~/.vnc/passwd \
+#       -env X11VNC_FINDDISPLAY_ALWAYS_FAILS=1 \
+#       -env X11VNC_CREATE_GEOM=${*:-1152x864x24} \
+#       -env HOME=/home/yourusername \
+#       -users *yourusername \
+#       -noxrecord -noxfixes -noxdamage -forever -bg
+
+#       -inetd \
+#       -gone 'pkill -f "Xvfb.*`echo $DISPLAY | cut -d . -f 1`\>"'
+
+#
+#x11vnc -display WAIT:cmd=FINDCREATEDISPLAY-Xvfb.xdmcp -env X11VNC_FINDDISPLAY_ALWAYS_FAILS=1 -env X11VNC_CREATE_GEOM=${*:-1152x864} -env HOME=/home/yourusername -users *yourusername -noxrecord -noxfixes -noxdamage -forever -bg -rfbauth ~/.vnc/passwd -o /var/log/x11vnc.log
+
+# Extras
+#-users *yourusername
+#-Xvfb.xdmcp
+#-auth /var/run/gdm/*/database
+#-auth /var/run/lightdm/root/*
+#-env FD_SESS=lightdm
+#/var/run/xauth/*
