@@ -1,0 +1,2 @@
+ca1ts-soaqa10.travelsecure.local
+ca1ts-soaqa20.travelsecure.local

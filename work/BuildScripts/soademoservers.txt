@@ -1,0 +1,2 @@
+ca1cw-soademo01.csaweb.local
+ca1cw-soademo02.csaweb.local

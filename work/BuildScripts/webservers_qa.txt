@@ -1,0 +1,2 @@
+ca1ts-webqa01.travelsecure.local
+ca1ts-webqa02.travelsecure.local
